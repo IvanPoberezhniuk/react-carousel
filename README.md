@@ -1,2 +1,2 @@
 - [Demo](https://ivanpoberezhniuk.github.io/react-carousel/).
-- [PullRequest](https://github.com/facebook/create-react-app).
+- [PR](https://github.com/IvanPoberezhniuk/react-carousel/pull/1/files).

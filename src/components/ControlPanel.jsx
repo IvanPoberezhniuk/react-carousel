@@ -6,7 +6,6 @@ const ControlPanel = props => {
     frameSize,
     itemWidth,
     animationDuration,
-    isInfinite,
     imgCount,
     INPUT_TYPE
   } = props.state;
@@ -20,7 +19,7 @@ const ControlPanel = props => {
       <input
         type="range"
         min="130"
-        max="600"
+        max={window.innerWidth / imgCount * 0.94}
         name="itemWidth"
         value={itemWidth}
         onChange={event => handleInputChange(event, INPUT_TYPE.ITEM_WIDTH)}
@@ -54,13 +53,6 @@ const ControlPanel = props => {
         max="10"
         value={step}
         onChange={event => handleInputChange(event, INPUT_TYPE.STEP)}
-      />
-      <label htmlFor="isInfinite">{`Infiinite: ${isInfinite}`} </label>
-      <input
-        name="isInfinite"
-        type="checkbox"
-        checked={isInfinite}
-        onChange={event => handleInputChange(event, INPUT_TYPE.INFINITE)}
       />
     </section>
   );

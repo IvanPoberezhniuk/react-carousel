@@ -25,6 +25,7 @@ body {
     width: 6666px;
     position: relative;
     flex-direction: row;
+    transition-duration: inherit;
   }
 
   &__slider-wrapper {
@@ -48,12 +49,16 @@ body {
   }
 
   &__buttons {
-    background-color: lightblue;
+    transition-duration: 200ms;
+    background-color: skyblue;
     border-radius: 5px;
-    border: 1px #3071a9 solid;
+    border: 3px #3071a9 solid;
+    padding: 0 0.2em;
+    font-size: 2.5em;
+    color: #3071a9;
     &:hover {
       cursor: pointer;
-      background-color: #3071a9;
+      background-color: white;
     }
   }
 }

@@ -1,16 +1,7 @@
 import React from 'react';
 
 const Slider = props => {
-  const {
-    step,
-    frameSize,
-    itemWidth,
-    animationDuration,
-    isInfinite,
-    imgCount,
-    imgs,
-    range
-  } = props.state;
+  const { frameSize, itemWidth, animationDuration, imgs, range } = props.state;
 
   const { prev, next } = props;
 

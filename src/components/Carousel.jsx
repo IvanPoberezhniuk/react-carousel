@@ -19,8 +19,7 @@ const INPUT_TYPE = {
   STEP: 'STEP',
   FRAME_SIZE: 'FRAME_SIZE',
   ITEM_WIDTH: 'ITEM_WIDTH',
-  ANIMATION_DURATION: 'ANIMATION_DURATION',
-  INFINITE: 'INFINITE'
+  ANIMATION_DURATION: 'ANIMATION_DURATION'
 };
 
 class Carousel extends Component {
@@ -29,7 +28,6 @@ class Carousel extends Component {
     frameSize: 3,
     itemWidth: 130,
     animationDuration: 1000,
-    isInfinite: false,
     imgCount: imgs.length,
     imgs: imgs,
     range: 0,
@@ -60,32 +58,28 @@ class Carousel extends Component {
           animationDuration: value
         });
         break;
-      case INPUT_TYPE.INFINITE:
-        this.setState(prevState => ({
-          isInfinite: !prevState.isInfinite
-        }));
-        break;
       default:
         return;
     }
   };
 
   prev = () => {
-    this.setState(prevState => ({
-      range: Math.min(
-        prevState.range + this.state.itemWidth * this.state.step,
-        0
-      )
-    }));
+    this.setState(prevState => {
+      const { range, itemWidth, step } = prevState;
+      return {
+        range: Math.min(range + itemWidth * step, 0)
+      };
+    });
   };
 
   next = () =>
     this.setState(prevState => {
+      const { range, itemWidth, step, frameSize, imgCount } = prevState;
+
       return {
         range: Math.max(
-          prevState.range - this.state.itemWidth * this.state.step,
-          -this.state.itemWidth * this.state.imgCount +
-            this.state.itemWidth * this.state.step
+          range - itemWidth * step,
+          -itemWidth * imgCount + itemWidth * frameSize
         )
       };
     });
