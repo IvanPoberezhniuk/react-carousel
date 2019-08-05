@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "52420ed8fc73569e64a864a155112e73",
+    "revision": "e7af8ced75c285cb3ec166e255d5f207",
     "url": "/react-carousel/index.html"
   },
   {
-    "revision": "79360c310a992010d8a0",
+    "revision": "380ef90b0d2ecae8fb98",
     "url": "/react-carousel/static/css/main.3ab59c83.chunk.css"
   },
   {
-    "revision": "681b51057d74cfa8975d",
-    "url": "/react-carousel/static/js/2.65aa1cca.chunk.js"
+    "revision": "5f5d5236f83f4993af95",
+    "url": "/react-carousel/static/js/2.47ca5f5e.chunk.js"
   },
   {
-    "revision": "79360c310a992010d8a0",
-    "url": "/react-carousel/static/js/main.47c74840.chunk.js"
+    "revision": "380ef90b0d2ecae8fb98",
+    "url": "/react-carousel/static/js/main.1e00e59c.chunk.js"
   },
   {
     "revision": "7f7feaa79c4ebfe5916f",
