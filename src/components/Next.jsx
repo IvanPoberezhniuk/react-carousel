@@ -1,8 +1,12 @@
 import React from 'react';
 
-const Next = () => {
+const Next = ({ next }) => {
   return (
-    <button type="button" className="carousel__next carousel__buttons">
+    <button
+      type="button"
+      className="carousel__next carousel__buttons"
+      onClick={next}
+    >
       ⇨
     </button>
   );

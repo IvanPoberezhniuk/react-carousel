@@ -7,10 +7,9 @@ const ControlPanel = props => {
     itemWidth,
     animationDuration,
     imgCount,
-    INPUT_TYPE
   } = props.state;
 
-  const { handleInputChange } = props;
+  const { handleInputChange, INPUT_TYPE } = props;
 
   return (
     <section className="carousel__control-panel">

@@ -1,4 +1,7 @@
 import React from 'react';
+import Prev from './Prev';
+import Next from './Next';
+const randomstring = require('randomstring');
 
 const Slider = props => {
   const { frameSize, itemWidth, animationDuration, imgs, range } = props.state;
@@ -9,13 +12,7 @@ const Slider = props => {
 
   return (
     <section className="carousel__slider-wrapper">
-      <button
-        type="button"
-        className="carousel__prev carousel__buttons"
-        onClick={prev}
-      >
-        ⇦
-      </button>
+      <Prev prev={prev} />
       <section
         className="carousel__slider"
         style={{
@@ -28,20 +25,14 @@ const Slider = props => {
             <img
               src={img}
               alt={index}
-              key={index}
+              key={randomstring.generate(3)}
               className="carousel__image"
               style={{ width: itemWidth + 'px' }}
             />
           ))}
         </div>
       </section>
-      <button
-        type="button"
-        className="carousel__next carousel__buttons"
-        onClick={next}
-      >
-        ⇨
-      </button>
+      <Next next={next} />
     </section>
   );
 };

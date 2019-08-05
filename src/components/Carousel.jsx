@@ -30,12 +30,11 @@ class Carousel extends Component {
     animationDuration: 1000,
     imgCount: imgs.length,
     imgs: imgs,
-    range: 0,
-    INPUT_TYPE: INPUT_TYPE
+    range: 0
   };
 
   handleInputChange = (event, TYPE) => {
-    const value = event.target.value;
+    const { value } = event.target;
 
     switch (TYPE) {
       case INPUT_TYPE.STEP:
@@ -85,12 +84,14 @@ class Carousel extends Component {
     });
 
   render() {
-    const { state, handleInputChange, prev, next } = this;
-
     return (
       <div className="carousel">
-        <ControlPanel state={state} handleInputChange={handleInputChange} />
-        <Slider state={state} prev={prev} next={next} />
+        <ControlPanel
+          state={this.state}
+          handleInputChange={this.handleInputChange}
+          INPUT_TYPE={INPUT_TYPE}
+        />
+        <Slider state={this.state} prev={this.prev} next={this.next} />
       </div>
     );
   }
