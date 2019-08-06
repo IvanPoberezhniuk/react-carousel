@@ -1,0 +1,64 @@
+@import './input.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightskyblue;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+
+  &__slider {
+    overflow: hidden;
+    border: 3px solid lightcoral;
+    background-color: lightpink;
+    border-radius: 5px;
+  }
+
+  &__slides-wrapper {
+    width: 6666px;
+    position: relative;
+    flex-direction: row;
+    transition-duration: inherit;
+  }
+
+  &__slider-wrapper {
+    display: flex;
+  }
+
+  &__control-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    color: lightcoral;
+    font-weight: bold;
+    text-shadow: black 1px 1px 0, black -1px -1px 0, black -1px 1px 0,
+      black 1px -1px 0;
+  }
+
+  &__image {
+    display: block;
+    float: left;
+  }
+
+  &__buttons {
+    transition-duration: 200ms;
+    background-color: skyblue;
+    border-radius: 5px;
+    border: 3px #3071a9 solid;
+    padding: 0 0.2em;
+    font-size: 2.5em;
+    color: #3071a9;
+    &:hover {
+      cursor: pointer;
+      background-color: white;
+    }
+  }
+}

@@ -1,1 +1,2 @@
-# react-carousel
+- [Demo](https://ivanpoberezhniuk.github.io/react-carousel/).
+- [PR](https://github.com/IvanPoberezhniuk/react-carousel/pull/1/files).
